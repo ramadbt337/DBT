@@ -1,0 +1,133 @@
+2020-12-07 18:11:22.527181 (MainThread): Done resetting log handlers.
+2020-12-07 18:11:22.527212 (MainThread): Received response from rpc task.
+2020-12-07 18:11:22.527235 (MainThread): Updating status to Paused
+2020-12-07 18:12:27.541222 (MainThread): Caught sighup
+2020-12-07 18:12:27.687602 (MainThread): Updating status to Ready
+2020-12-07 18:12:27.688718 (MainThread): ignoring not number metric _dd1.sr.eausr:None, 74 additional messages skipped
+2020-12-07 18:12:27.690313 (MainThread): writing 2 spans (enabled:True), 43 additional messages skipped
+2020-12-07 18:12:27.690401 (MainThread): 
+      name postgres.query
+        id 1761179572216657239
+  trace_id 145733645921309813
+ parent_id None
+   service defaultdb
+  resource SELECT "develop_request"."id", "develop_request"."user_id", "develop_request"."status", "develop_request"."environment_id", "develop_request"."project_id", "develop_request"."account_id", "develop_request"."status_message", "develop_request"."dbt_version", "develop_request"."container_version", "develop_request"."created_at", "develop_request"."updated_at", "develop_request"."last_request_at", "develop_request"."environment_setup_started_at", "develop_request"."profile_setup_started_at", "develop_request"."deps_setup_started_at", "develop_request"."running_at", "develop_request"."ready_at", "develop_request"."stopping_at", "develop_request"."stopped_at" FROM "develop_request" WHERE "develop_request"."id" = %s FOR UPDATE
+      type sql
+     start 1607364747.6885061
+       end 1607364747.690227
+  duration 0.001721s
+     error 0
+      tags 
+           django.db.alias:default
+           django.db.vendor:postgresql
+           runtime-id:39ed773355fd44c2a7c56dcce26b513d, 85 additional messages skipped
+2020-12-07 18:12:27.700331 (MainThread): Kicking off rpc task.
+2020-12-07 18:12:27.700404 (MainThread): dbt client called with ['--partial-parse', 'rpc', '--profile', 'user']
+2020-12-07 18:12:27.703237 (MainThread): Setting up log handlers...
+2020-12-07 18:12:27.720879 (MainThread): Running with dbt=0.18.1
+2020-12-07 18:12:27.928276 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.rpc.server.RPCServerTask'>, debug=False, defer=None, exclude=None, host='0.0.0.0', log_cache_events=False, log_format='default', models=None, partial_parse=True, port=8580, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='rpc', write_json=True)
+2020-12-07 18:12:28.049387 (MainThread): Tracking: tracking
+2020-12-07 18:12:28.049635 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e3f9542b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e3f954668>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e48bc7080>]}
+2020-12-07 18:12:28.050035 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=13
+2020-12-07 18:12:28.050690 (MainThread): Supported methods: ['cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'status', 'test']
+2020-12-07 18:12:28.050981 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2020-12-07 18:12:28.052906 (Thread-1): Parsing macros/adapters.sql
+2020-12-07 18:12:28.085301 (Thread-1): Parsing macros/catalog.sql
+2020-12-07 18:12:28.087396 (Thread-1): Parsing macros/materializations/table.sql
+2020-12-07 18:12:28.091380 (Thread-1): Parsing macros/materializations/merge.sql
+2020-12-07 18:12:28.093418 (Thread-1): Parsing macros/materializations/view.sql
+2020-12-07 18:12:28.094942 (Thread-1): Parsing macros/materializations/incremental.sql
+2020-12-07 18:12:28.105335 (Thread-1): Parsing macros/core.sql
+2020-12-07 18:12:28.109567 (Thread-1): Parsing macros/adapters/common.sql
+2020-12-07 18:12:28.154215 (AgentWriter): reported 34 traces in 0.04499s, 3 additional messages skipped
+2020-12-07 18:12:28.157724 (AgentWriter): initialized RateSampler, sample 100% of traces, 143 additional messages skipped
+2020-12-07 18:12:28.159134 (Thread-1): Parsing macros/materializations/helpers.sql
+2020-12-07 18:12:28.168410 (Thread-1): Parsing macros/materializations/table/table.sql
+2020-12-07 18:12:28.175483 (Thread-1): Parsing macros/materializations/seed/seed.sql
+2020-12-07 18:12:28.198689 (Thread-1): Parsing macros/materializations/view/view.sql
+2020-12-07 18:12:28.205174 (Thread-1): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-12-07 18:12:28.210412 (Thread-1): Parsing macros/materializations/incremental/helpers.sql
+2020-12-07 18:12:28.212347 (Thread-1): Parsing macros/materializations/incremental/incremental.sql
+2020-12-07 18:12:28.218693 (Thread-1): Parsing macros/materializations/common/merge.sql
+2020-12-07 18:12:28.234974 (Thread-1): Parsing macros/materializations/snapshot/strategies.sql
+2020-12-07 18:12:28.251896 (Thread-1): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-12-07 18:12:28.253742 (Thread-1): Parsing macros/materializations/snapshot/snapshot.sql
+2020-12-07 18:12:28.285665 (Thread-1): Parsing macros/schema_tests/relationships.sql
+2020-12-07 18:12:28.287778 (Thread-1): Parsing macros/schema_tests/not_null.sql
+2020-12-07 18:12:28.289429 (Thread-1): Parsing macros/schema_tests/unique.sql
+2020-12-07 18:12:28.291275 (Thread-1): Parsing macros/schema_tests/accepted_values.sql
+2020-12-07 18:12:28.294077 (Thread-1): Parsing macros/etc/get_custom_database.sql
+2020-12-07 18:12:28.295846 (Thread-1): Parsing macros/etc/query.sql
+2020-12-07 18:12:28.296954 (Thread-1): Parsing macros/etc/datetime.sql
+2020-12-07 18:12:28.306070 (Thread-1): Parsing macros/etc/get_custom_alias.sql
+2020-12-07 18:12:28.307108 (Thread-1): Parsing macros/etc/is_incremental.sql
+2020-12-07 18:12:28.308795 (Thread-1): Parsing macros/etc/get_custom_schema.sql
+2020-12-07 18:12:28.370742 (Thread-1): Acquiring new snowflake connection "model.my_new_project.my_second_dbt_model".
+2020-12-07 18:12:28.400151 (Thread-1): Acquiring new snowflake connection "model.my_new_project.my_first_dbt_model".
+2020-12-07 18:12:29.066850 (Thread-2): handling status request
+2020-12-07 18:12:29.067483 (Thread-2): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0df13485-1edb-4227-bddf-703ba8ecdee5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e3df588d0>]}
+2020-12-07 18:12:29.072464 (Thread-2): sending response (<Response 8705 bytes [200 OK]>) to 10.0.15.178
+2020-12-07 18:13:16.089970 (Thread-3): handling status request
+2020-12-07 18:13:16.091839 (Thread-3): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '0df13485-1edb-4227-bddf-703ba8ecdee5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e3dfd5390>]}
+2020-12-07 18:13:16.095690 (Thread-3): sending response (<Response 8705 bytes [200 OK]>) to 10.0.24.186
+2020-12-07 18:13:18.114014 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e48886710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e48b85278>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e3f922be0>]}
+2020-12-07 18:13:18.114302 (MainThread): Flushing usage events
+2020-12-07 18:13:18.116591 (MainThread): Checking header 'user-agent' tracing in whitelist set(), 44 additional messages skipped
+2020-12-07 18:13:18.234202 (MainThread): writing 1 spans (enabled:True), 58 additional messages skipped
+2020-12-07 18:13:18.234521 (MainThread): 
+      name requests.request
+        id 17568204446204057733
+  trace_id 9062046724662730505
+ parent_id None
+   service requests
+  resource requests.request
+      type http
+     start 1607364798.1162891
+       end 1607364798.2339492
+  duration 0.117660s
+     error 0
+      tags 
+           http.method:POST
+           http.status_code:200
+           http.url:https://fishtownanalytics.sinter-collect.com/com.snowplowanalytics.snowplow/tp2
+           runtime-id:39ed773355fd44c2a7c56dcce26b513d, 67 additional messages skipped
+2020-12-07 18:13:18.237949 (MainThread): Connection 'model.my_new_project.my_first_dbt_model' was properly closed.
+2020-12-07 18:13:18.238622 (MainThread): Runtime Error
+  no dbt_project.yml found at expected path /usr/src/develop/user-12447/environment-15071/repository-12442/dbt_project.yml
+Traceback (most recent call last):
+  File "/usr/src/app/sinter/clients/dbt.py", line 929, in call
+    command + extra_args
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 202, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 255, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 147, in run
+    self.run_forever()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 142, in run_forever
+    threaded=not self.task_manager.single_threaded(),
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 1012, in run_simple
+    inner()
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 969, in inner
+    srv.serve_forever()
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 737, in serve_forever
+    HTTPServer.serve_forever(self)
+  File "/usr/lib/python3.6/socketserver.py", line 236, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/lib/python3.6/selectors.py", line 376, in select
+    fd_event_list = self._poll.poll(timeout)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 102, in _sighup_handler
+    self.task_manager.reload_config()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/rpc/task_manager.py", line 128, in reload_config
+    config = self.config.from_args(self.args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 230, in from_args
+    project, profile = cls.collect_parts(args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 200, in collect_parts
+    verify_version=version_check
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 677, in partial_load
+    project_dict = _raw_project_from(project_root)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 172, in _raw_project_from
+    .format(project_yaml_filepath)
+dbt.exceptions.DbtProjectError: Runtime Error
+  no dbt_project.yml found at expected path /usr/src/develop/user-12447/environment-15071/repository-12442/dbt_project.yml
+2020-12-07 18:13:18.240341 (MainThread): Runtime Error
+  no dbt_project.yml found at expected path /usr/src/develop/user-12447/environment-15071/repository-12442/dbt_project.yml
