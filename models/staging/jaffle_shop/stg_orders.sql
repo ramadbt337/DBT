@@ -3,5 +3,4 @@ select
     user_id as customer_id,
     order_date,
     status
-
-from DEMO_DB.JAFFLE_SHOP.raw_Orders
+from {{ source('jaffle_shop','orders') }}
